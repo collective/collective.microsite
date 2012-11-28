@@ -82,6 +82,18 @@ class TestCase(IntegrationTestCase):
         self.assertEqual(
             setup.getVersionForProfile('profile-collective.microsite:default'), u'0')
 
+    def test_rolemap__collective_microsite_Manage_micro_site__rolesOfPermission(self):
+        permission = "collective.microsite: Manage micro site"
+        roles = [item['name'] for item in self.portal.rolesOfPermission(permission) if item['selected'] == 'SELECTED']
+        roles.sort()
+        self.assertEqual(roles, [
+            'Manager',
+            'Site Administrator'])
+
+    def test_rolemap__collective_microsite_Manage_micro_site__acquiredRolesAreUsedBy(self):
+        permission = "collective.microsite: Manage micro site"
+        self.assertEqual(self.portal.acquiredRolesAreUsedBy(permission), '')
+
     def test_uninstall__actions__object_buttons__make_microsite(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
         installer.uninstallProducts(['collective.microsite'])

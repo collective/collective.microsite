@@ -42,6 +42,10 @@ def setUp(self):
 
     setRoles(portal, TEST_USER_ID, ['Manager'])
 
+    # Create folder.
+    folder = portal[portal.invokeFactory('Folder', 'folder')]
+    folder.reindexObject()
+
     transaction.commit()
 
 
