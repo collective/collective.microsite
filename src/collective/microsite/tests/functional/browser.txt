@@ -2,4 +2,42 @@ Log in as Manager::
 
     >>> browser.login(TEST_USER_NAME, TEST_USER_PASSWORD)
 
-Continue your test::
+Go to folder and make micro site::
+
+    >>> browser.open('/folder')
+    >>> print browser.bycss('#breadcrumbs-home')
+    --- 1 ---
+    ...
+    <a href="http://nohost/plone">Home</a>
+    ...
+
+    >>> 'Make micro site' in browser.contents
+    True
+    >>> 'Unmake micro site' in browser.contents
+    False
+
+    >>> browser.getLink('Make micro site').click()
+    >>> print browser.bycss('#breadcrumbs-home')
+    --- 1 ---
+    ...
+    <a href="http://nohost/plone/folder">Home</a>
+    ...
+
+Unmake micro site::
+
+    >>> 'Make micro site' in browser.contents
+    False
+    >>> 'Unmake micro site' in browser.contents
+    True
+
+    >>> browser.getLink('Unmake micro site').click()
+    >>> print browser.bycss('#breadcrumbs-home')
+    --- 1 ---
+    ...
+    <a href="http://nohost/plone">Home</a>
+    ...
+
+    >>> 'Make micro site' in browser.contents
+    True
+    >>> 'Unmake micro site' in browser.contents
+    False
