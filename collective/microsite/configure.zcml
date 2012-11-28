@@ -1,0 +1,20 @@
+<configure
+  i18n_domain="collective.microsite"
+  xmlns:five="http://namespaces.zope.org/five"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  xmlns:i18n="http://namespaces.zope.org/i18n"
+  xmlns="http://namespaces.zope.org/zope">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <genericsetup:registerProfile
+    description="Installs the collective.microsite package"
+    directory="profiles/default"
+    name="default"
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    title="collective.microsite"
+    />
+
+  <include package=".browser" />
+
+</configure>

@@ -1,0 +1,47 @@
+<configure
+  i18n_domain="collective.microsite"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns="http://namespaces.zope.org/zope">
+
+  <permission
+    id="collective.microsite.ManageMicroSite"
+    title="collective.microsite: Manage micro site"
+    />
+
+  <browser:page
+    attribute="available_to_make_microsite"
+    class=".miscellaneous.Miscellaneous"
+    for="*"
+    layer=".interfaces.ICollectiveMicrositeLayer"
+    name="available-to-make-microsite"
+    permission="collective.microsite.ManageMicroSite"
+    />
+
+  <browser:page
+    attribute="unavailable_to_make_microsite"
+    class=".miscellaneous.Miscellaneous"
+    for="*"
+    layer=".interfaces.ICollectiveMicrositeLayer"
+    name="unavailable-to-make-microsite"
+    permission="collective.microsite.ManageMicroSite"
+    />
+
+  <browser:page
+    attribute="make_microsite"
+    class=".miscellaneous.Miscellaneous"
+    for="*"
+    layer=".interfaces.ICollectiveMicrositeLayer"
+    name="make-microsite"
+    permission="collective.microsite.ManageMicroSite"
+    />
+
+  <browser:page
+    attribute="unmake_microsite"
+    class=".miscellaneous.Miscellaneous"
+    for="*"
+    layer=".interfaces.ICollectiveMicrositeLayer"
+    name="unmake-microsite"
+    permission="collective.microsite.ManageMicroSite"
+    />
+
+</configure>
