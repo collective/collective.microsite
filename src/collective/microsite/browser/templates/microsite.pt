@@ -1,0 +1,21 @@
+<html
+  i18n:domain="collective.microsite"
+  lang="en"
+  metal:use-macro="context/main_template/macros/master"
+  xml:lang="en"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns="http://www.w3.org/1999/xhtml">
+  <body>
+    <metal:content-title fill-slot="content-title">
+      <h1 class="documentFirstHeading" tal:content="view/title">Title</h1>
+    </metal:content-title>
+    <metal:content-description fill-slot="content-description">
+      <div class="documentDescription" tal:content="view/description">Description</div>
+    </metal:content-description>
+    <metal:content-core fill-slot="content-core">
+      <div tal:replace="structure provider: collective.microsite.microsite.viewletmanager" />
+    </metal:content-core>
+  </body>
+</html>

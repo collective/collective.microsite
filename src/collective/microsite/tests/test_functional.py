@@ -40,7 +40,8 @@ def setUp(self):
     browser.handleErrors = True
     portal.error_log._ignored_exceptions = ()
 
-    setRoles(portal, TEST_USER_ID, ['Manager'])
+    setRoles(portal, TEST_USER_ID, ['Site Administrator'])
+    # setRoles(portal, TEST_USER_ID, ['Manager'])
 
     # Create folder.
     folder = portal[portal.invokeFactory('Folder', 'folder')]

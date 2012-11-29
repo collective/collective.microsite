@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-08-17 06:33+0000\n"
+"POT-Creation-Date: 2012-11-29 20:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,3 +13,16 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.microsite\n"
+
+#: ./profiles/default/actions.xml
+msgid "Make micro site"
+msgstr ""
+
+#: ./profiles/default/types/collective.microsite.MicroSite.xml
+msgid "MicroSite"
+msgstr ""
+
+#: ./profiles/default/actions.xml
+msgid "Unmake micro site"
+msgstr ""
+

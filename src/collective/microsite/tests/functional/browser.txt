@@ -1,4 +1,4 @@
-Log in as Manager::
+Log in as Site Administrator::
 
     >>> browser.login(TEST_USER_NAME, TEST_USER_PASSWORD)
 
@@ -41,3 +41,26 @@ Unmake micro site::
     True
     >>> 'Unmake micro site' in browser.contents
     False
+
+Go to portal and add MicroSite::
+
+    >>> browser.open('/')
+
+    >>> browser.getLink('MicroSite').click()
+    >>> browser.getControl(name="form.widgets.IDublinCore.title").value = 'Micrö Site'
+    >>> browser.getControl(name="form.widgets.IDublinCore.description").value = 'Descriptiön of Micrö Site'
+    >>> browser.getControl(name="form.buttons.save").click()
+
+    >>> print browser.bycss('.documentFirstHeading')
+    --- 1 ---
+    <h1 class="documentFirstHeading">Micr&#246; Site</h1>
+
+    >>> print browser.bycss('.documentDescription')
+    --- 1 ---
+    <div class="documentDescription">Descripti&#246;n of Micr&#246; Site</div>
+
+    >>> print browser.bycss('#breadcrumbs-home')
+    --- 1 ---
+    <span id="breadcrumbs-home">
+    <a href="http://nohost/plone/micro-site">Home</a>
+    </span>

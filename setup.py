@@ -24,6 +24,10 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'Products.CMFPlone>=4.2',
+        'five.grok',
+        'five.pt',
+        'plone.app.dexterity',
         'hexagonit.testing',
         'setuptools'],
     entry_points="""
