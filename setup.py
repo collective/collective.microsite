@@ -1,12 +1,22 @@
 from setuptools import find_packages
 from setuptools import setup
 
+import os
+
+
+long_description = (
+    open(os.path.join("src", "collective", "microsite", "docs", "README.rst")).read() + "\n" +
+    open(os.path.join("src", "collective", "microsite", "docs", "HISTORY.rst")).read() + "\n" +
+    open(os.path.join("src", "collective", "microsite", "docs", "INSTALL.rst")).read() + "\n" +
+    open(os.path.join("src", "collective", "microsite", "docs", "CONTRIBUTORS.rst")).read() + "\n" +
+    open(os.path.join("src", "collective", "microsite", "docs", "CREDITS.rst")).read())
+
 
 setup(
     name='collective.microsite',
     version='0.0',
     description="Adds action to make folderish content micro site.",
-    long_description=open("README.rst").read(),
+    long_description=long_description,
     classifiers=[
         "Framework :: Plone",
         "Framework :: Plone :: 4.2",

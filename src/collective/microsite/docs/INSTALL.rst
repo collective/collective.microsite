@@ -7,7 +7,7 @@ zc.buildout and the plone.recipe.zope2instance
 ==============================================
 
 Use ``zc.buildout`` and the ``plone.recipe.zope2instance``
-recipe by adding ``hexagonit.foldercontents`` to the list of egg::
+recipe by adding ``collective.microsite`` to the list of egg::
 
     [buildout]
     ...
