@@ -14,7 +14,7 @@ long_description = (
 
 setup(
     name='collective.microsite',
-    version='0.0',
+    version='0.0.0.1',
     description="Adds action to make folderish content micro site.",
     long_description=long_description,
     classifiers=[
