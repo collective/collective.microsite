@@ -115,7 +115,7 @@ class TestCase(IntegrationTestCase):
 
     def test_types__collective_microsite_MicroSite__content_icon(self):
         ctype = self.get_ctype('collective.microsite.MicroSite')
-        self.assertEqual(ctype.getIcon(), '')
+        self.assertEqual(ctype.getIcon(), 'logoIcon.png')
 
     def test_types__collective_microsite_MicroSite__allow_discussion(self):
         ctype = self.get_ctype('collective.microsite.MicroSite')
