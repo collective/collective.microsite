@@ -57,7 +57,7 @@ Go to portal and add MicroSite::
 
     >>> print browser.bycss('.documentDescription')
     --- 1 ---
-    <div class="documentDescription">Descripti&#246;n of Micr&#246; Site</div>
+    <div class="documentDescription ...>Descripti&#246;n of Micr&#246; Site</div>
 
     >>> print browser.bycss('#breadcrumbs-home')
     --- 1 ---

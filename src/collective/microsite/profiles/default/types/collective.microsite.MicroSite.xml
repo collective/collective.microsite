@@ -17,7 +17,7 @@
   <property name="allowed_content_types"/>
 
   <!-- Schema, class and security -->
-  <property name="schema">plone.directives.form.Schema</property>
+  <property name="schema">plone.supermodel.model.Schema</property>
   <property name="klass">collective.microsite.content.MicroSite</property>
   <property name="add_permission">collective.microsite.ManageMicroSite</property>
 

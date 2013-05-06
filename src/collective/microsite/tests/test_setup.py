@@ -135,7 +135,7 @@ class TestCase(IntegrationTestCase):
 
     def test_types__collective_microsite_MicroSite__schema(self):
         ctype = self.get_ctype('collective.microsite.MicroSite')
-        self.assertEqual(ctype.schema, 'plone.directives.form.Schema')
+        self.assertEqual(ctype.schema, 'plone.supermodel.model.Schema')
 
     def test_types__collective_microsite_MicroSite__klass(self):
         ctype = self.get_ctype('collective.microsite.MicroSite')

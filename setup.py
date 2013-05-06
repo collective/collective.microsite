@@ -5,21 +5,19 @@ import os
 
 
 long_description = (
-    open(os.path.join("src", "collective", "microsite", "docs", "README.rst")).read() + "\n" +
+    open(os.path.join("README.rst")).read() + "\n" +
     open(os.path.join("src", "collective", "microsite", "docs", "HISTORY.rst")).read() + "\n" +
-    open(os.path.join("src", "collective", "microsite", "docs", "INSTALL.rst")).read() + "\n" +
-    open(os.path.join("src", "collective", "microsite", "docs", "CONTRIBUTORS.rst")).read() + "\n" +
     open(os.path.join("src", "collective", "microsite", "docs", "CREDITS.rst")).read())
 
 
 setup(
     name='collective.microsite',
-    version='0.0.0.1',
+    version='0.0.0.2',
     description="Adds action to make folderish content micro site.",
     long_description=long_description,
     classifiers=[
         "Framework :: Plone",
-        "Framework :: Plone :: 4.2",
+        "Framework :: Plone :: 4.3",
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7"],
@@ -34,12 +32,9 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'Products.CMFPlone>=4.2',
-        'five.grok',
-        'five.pt',
         'plone.app.dexterity',
-        'hexagonit.testing',
         'setuptools'],
+    extras_require={'test': ['hexagonit.testing']},
     entry_points="""
     # -*- Entry points: -*-
 
