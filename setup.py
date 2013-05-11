@@ -32,7 +32,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'plone.app.dexterity',
+        'plone.app.dexterity[relations]',
         'setuptools'],
     extras_require={'test': ['hexagonit.testing']},
     entry_points="""
